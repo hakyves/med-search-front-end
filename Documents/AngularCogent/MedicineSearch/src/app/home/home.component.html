@@ -1,0 +1,46 @@
+<h1>Welcome to Google a medecine</h1>
+<p>This platform help you to find a medicine in your area we partner with different medical stores</p>
+
+
+<div class='form-group'>
+<table>
+    <tr>
+        <th>
+<input type='text'[(ngModel)]='name' placeholder ='medicine or blood type'
+class ='form-control' name ='name'></th>
+<th>
+<input type='name' placeholder='Enter city'
+class ='form-control' name ='city'></th>
+<th>
+<button class='btn btn-secondary sm-btn'(click)='getMedsearchFunction()'>search</button></th>
+</tr>
+</table>
+<div style="margin:auto; width: 70%; margin-top: 30px;">
+  </div>
+  <table class='table table-striped' >
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            
+        </tr>
+    </thead>
+<tbody>
+
+  <tr *ngFor="let medsearch of medsearchs">
+    <td ><b>Name</b>:{{medsearch.name}}</td>
+    <td><b>Store</b>: {{medsearch.shopName}}</td>
+    <td><b>City</b>: {{medsearch.city}}</td>
+    <td><b>Address</b>:{{medsearch.address}}</td>
+    <td><b>Phone</b>:{{medsearch.phone}}</td>
+    <td><b>Quantity</b>:{{medsearch.qty}}</td>
+</tr>
+</tbody>
+
+</table>
+  

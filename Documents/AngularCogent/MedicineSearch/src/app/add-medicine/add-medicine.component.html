@@ -1,0 +1,33 @@
+<body>
+    <div class='col-md-6'>
+        <h3 class='text-center'>Add medicine</h3>
+       <form>
+         
+            <div class='form-group'>
+                <label for='shopName'>medication name</label>
+                <input type='name'[(ngModel)]='medicine.name' placeholder='Enter name'
+                class ='form-control' name ='medicine.name'>
+             </div>
+             <div class='form-group'>
+                <label for='code'>code</label>
+                <input type='code'[(ngModel)]='medicine.code' placeholder='Enter medicine code'
+                class ='form-control' name ='medicine.code'>
+             </div>
+    
+             <div class='form-group'>
+                <label for='qty'>Quantity</label>
+                <input type='qty'[(ngModel)]='medicine.qty' placeholder='enter quantity'
+                class ='form-control' name ='medicine.qty'>
+             </div>
+             <div class='form-group'>
+                <label for='price'>Price</label>
+                <input type='qty'[(ngModel)]='medicine.price' placeholder='enter price'
+                class ='form-control' name ='medicine.price'>
+             </div>
+            
+            
+             <button class='btn btn-secondary btn-sm'(click)='addMedicine()'>Save</button>
+       </form>
+    </div>
+    </body>
+    

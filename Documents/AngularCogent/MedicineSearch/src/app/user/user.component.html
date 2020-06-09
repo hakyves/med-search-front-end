@@ -1,0 +1,30 @@
+<div class='col-md-6'>
+    <table class='table table-striped'>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email address</th>
+             
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+              
+
+                <td><button routerLink ='/' class ='btn btn-primary'
+                    (click)='getUser(user)'>Update </button></td>
+                    <!-- <td><button routerLink = "EditBookComponent" class ='btn btn-primary'
+                      >Update Book</button></td> -->
+                    
+                    
+                <td><button class='btn btn-danger'
+                (click)='deleteUser(user)'>Delete</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
+    
+

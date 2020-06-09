@@ -1,0 +1,18 @@
+<header>
+    <nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+      <ul class='navbar-nav'>
+          <li><a *ngIf="checkIfAdmin()" routerLink='/medicalshop' class='nav-link'>Medical store</a></li>
+          <li><a *ngIf="checkIfAdmin()" routerLink='/bloodbank' class='nav-link'>Blood Bank</a></li>
+          <li><a *ngIf="checkIfAdmin()" routerLink='/createBloodBank' class='nav-link'>Create a Blood Bank </a></li>
+          <li><a *ngIf="checkIfAdmin()" routerLink='/createMedicalShop' class='nav-link'>Create a MedicalShop </a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn() && !checkIfAdmin()" routerLink='/add-medicine' class='nav-link'>Add Item </a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn() && !checkIfAdmin()" routerLink='/medicine' class='nav-link'>View Items </a></li>
+          <li><a *ngIf="checkIfAdmin()" routerLink='/blood'class='nav-link'>View Bloods </a></li>
+          <li><a *ngIf="checkIfAdmin()" routerLink='/medicine' class='nav-link'>View medicines </a></li>
+          <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink='/login' class='nav-link'>Login</a></li>
+          <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink='/home' class='nav-link'>Home</a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn()" routerLink='/logout' class='nav-link'>Logout</a></li>
+      </ul>
+    </nav>
+    
+  </header>

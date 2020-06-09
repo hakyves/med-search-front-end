@@ -1,0 +1,36 @@
+<div class='col-md-6'>
+    <table class='table table-striped'>
+        <thead>
+            <tr>
+                <th>Blood Bank</th>
+                <th>state</th>
+                <th>city</th>
+                <th>address</th>
+                <th>phone</th>
+                <th>Open 247</th>
+                <th>Action</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bloodbank of bloodbanks">
+                <td>{{bloodbank.bloodBankName}}</td>
+                <td>{{bloodbank.state}}</td>
+                <td>{{bloodbank.city}}</td>
+                <td>{{bloodbank.address}}</td>
+                <td>{{bloodbank.phone}}</td>
+                <td>{{bloodbank.open247}}</td>
+
+                <td><button routerLink ='/edit-bloodbank' class='btn btn-secondary btn-sm'
+                    (click)='getBloodBank(bloodbank)'>Update </button></td>
+                  
+                <td><button class='btn btn-danger btn-sm'
+                (click)='deleteBloodBank(bloodbank)'>Delete</button></td>
+                <td><button routerLink ='/add-user2' class='btn btn-secondary btn-sm'
+                    (click)='getBloodBank(bloodbank.id)'>Add User </button></td>
+            </tr>
+        </tbody>
+
+    </table>
+    
+    </div>

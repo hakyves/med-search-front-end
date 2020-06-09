@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #60787c;
+    height: 100vh;
+    align-items:center;
+  }
+  col-md-6 {
+     align-items: center;
+
+  }

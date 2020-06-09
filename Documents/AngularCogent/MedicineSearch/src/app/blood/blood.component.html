@@ -1,0 +1,30 @@
+<div class='col-md-6'>
+    <table class='table table-striped'>
+        <thead>
+            <tr>
+                <th>Blood Type</th>
+                <th>Liters</th>
+                <th>Action</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let blood of bloods">
+                <td>{{blood.bloodType}}</td>
+                <td>{{blood.amount}}</td>
+                
+
+                <td><button routerLink ='/' class ='btn btn-secondary btn-sm'
+                    (click)='getBlood(blood)'>Update </button></td>
+                    <!-- <td><button routerLink = "EditBookComponent" class ='btn btn-primary'
+                      >Update Book</button></td> -->
+                    
+                    
+                <td><button class='btn btn-danger btn-sm'
+                (click)='deleteBlood(blood)'>Delete</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
+

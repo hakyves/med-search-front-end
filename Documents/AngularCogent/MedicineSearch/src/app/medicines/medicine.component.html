@@ -1,0 +1,30 @@
+<div class='col-md-6'>
+    <table class='table table-striped'>
+        <thead>
+            <tr>
+                <th>Medicine name</th>
+                <th>Medicine code</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let medicine of medicines">
+                <td>{{medicine.name}}</td>
+                <td>{{medicine.code}}</td>
+                <td>{{medicine.qty}}</td>
+                <td>{{medicine.price}}</td>
+
+                <td><button routerLink ='/' class ='btn btn-secondary btn-sm'
+                    (click)='getMedicine(medicine)'>Update </button></td>
+                    <!-- <td><button routerLink = "EditBookComponent" class ='btn btn-primary'
+                      >Update Book</button></td> -->
+                    
+                    
+                <td><button class='btn btn-danger btn-sm'
+                (click)='deleteMedicine(medicine)'>Delete</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
